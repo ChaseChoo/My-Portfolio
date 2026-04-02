@@ -158,22 +158,5 @@ if (document.readyState === 'loading') {
     createScrollToTopButton();
 }
 
+// Space theme - no particle system needed
 console.log('Portfolio script loaded successfully!');
-
-//gooey liquid footer
-const container = document.getElementById("particle-container");
-const fragment = document.createDocumentFragment();
-
-for (let i = 0; i < 100; i++) {
-    const span = document.createElement("span");
-    span.classListt.add("particle");
-
-    span.style.setProperty("--dim", '${3 + Math.random() * 6}rem');
-    span.style.setProperty("--uplift", '${-10 - Math.random() * 15}rem');
-    span.style.setProperty("--pos-x", '${Math.random() * 100}%');
-    span.style.setProperty("--dur", '${3 + Math.random() * 3}s');
-    span.style.setProperty("--delay", '${-1 *Math.random() * 10}s');
-
-    fragment.appendChild(span);
-}
-container.appendChild(fragment);
