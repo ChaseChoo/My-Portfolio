@@ -180,56 +180,30 @@ body::before {
     50% { transform: translateY(-20px); }
 }
 
-/* Landscape */
+/* Landscape - Extended transition to education section */
 .landscape {
     position: absolute;
-    bottom: 0;
+    bottom: -200px;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 500px;
     background: linear-gradient(180deg, 
         rgba(0, 212, 255, 0) 0%,
-        rgba(0, 212, 255, 0.1) 30%,
-        rgba(0, 212, 255, 0.2) 60%,
-        rgba(0, 212, 255, 0.3) 100%
+        rgba(0, 212, 255, 0.05) 20%,
+        rgba(10, 10, 30, 0.2) 40%,
+        rgba(10, 10, 30, 0.4) 60%,
+        rgba(10, 10, 30, 0.6) 100%
     );
     z-index: 6;
+    pointer-events: none;
 }
 
 .landscape::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background-image: 
-        linear-gradient(90deg, transparent 0%, rgba(184, 134, 11, 0.3) 15%, transparent 30%),
-        linear-gradient(90deg, transparent 25%, rgba(184, 134, 11, 0.2) 40%, transparent 60%),
-        linear-gradient(90deg, transparent 60%, rgba(139, 105, 20, 0.3) 75%, transparent 90%);
-    background-position: 0 100%, 100px 80px, 200px 100px;
-    background-repeat: repeat-x;
-    background-size: 100% 150px, 150% 120px, 180% 160px;
-    filter: blur(3px);
+    display: none;
 }
 
 .landscape::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        rgba(160, 82, 45, 0.4) 20%,
-        transparent 40%,
-        rgba(160, 82, 45, 0.3) 60%,
-        transparent 80%,
-        rgba(160, 82, 45, 0.4) 100%
-    );
-    background-size: 100% 100%;
-    filter: blur(5px);
+    display: none;
 }
 
 /* Hero content positioning */
@@ -238,21 +212,40 @@ body::before {
     z-index: 5;
     padding-left: 80px;
     max-width: 700px;
+    margin-top: -300px;
 }
 
 .hero-content h1 {
-    font-size: 56px;
+    font-size: 48px;
     margin-bottom: 10px;
     animation: fadeInUp 0.8s ease;
-    color: #00d4ff;
-    text-shadow: 0 0 40px rgba(0, 212, 255, 0.8), 0 0 80px rgba(0, 212, 255, 0.4);
-    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+    letter-spacing: 2px;
     font-weight: 900;
     text-align: left;
+    line-height: 1.2;
+}
+
+.hero-content h1 .highlight {
+    color: #00d4ff;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.8), 0 0 80px rgba(0, 212, 255, 0.4);
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease 0.1s backwards;
+    color: #ffffff;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-align: left;
+    line-height: 1.2;
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 20px;
     opacity: 0.9;
     animation: fadeInUp 0.8s ease 0.2s backwards;
@@ -276,7 +269,7 @@ body::before {
     display: flex;
     gap: 20px;
     justify-content: flex-start;
-    animation: fadeInUp 0.8s ease 0.6s backwards;
+    animation: fadeInUp 0.8s ease 0.5s backwards;
 }
 
 /* Settings Icon */
@@ -361,6 +354,7 @@ section {
     padding: 80px 0;
     position: relative;
     z-index: 2;
+    margin: 0;
 }
 
 section h2 {
@@ -392,6 +386,8 @@ section h2::after {
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    margin-top: -200px;
+    padding: 280px 0 80px 0;
 }
 
 .education::before {
@@ -401,8 +397,14 @@ section h2::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(10, 10, 30, 0.6) 0%, rgba(20, 15, 40, 0.5) 100%);
+    background: linear-gradient(180deg, 
+        rgba(10, 10, 30, 0) 0%,
+        rgba(10, 10, 30, 0.2) 20%,
+        rgba(10, 10, 30, 0.4) 40%,
+        rgba(10, 10, 30, 0.6) 100%
+    );
     z-index: 0;
+    pointer-events: none;
 }
 
 .education > * {
@@ -467,6 +469,8 @@ section h2::after {
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    margin-top: -200px;
+    padding: 280px 0 80px 0;
 }
 
 .projects::before {
@@ -476,8 +480,14 @@ section h2::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(10, 10, 30, 0.6) 0%, rgba(20, 15, 40, 0.5) 100%);
+    background: linear-gradient(180deg, 
+        rgba(10, 10, 30, 0) 0%,
+        rgba(10, 10, 30, 0.2) 20%,
+        rgba(10, 10, 30, 0.4) 40%,
+        rgba(10, 10, 30, 0.6) 100%
+    );
     z-index: 0;
+    pointer-events: none;
 }
 
 .projects > * {
